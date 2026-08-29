@@ -1,0 +1,8 @@
+<!doctype html>
+<html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin Dashboard</title><link rel="stylesheet" href="/style.css"></head>
+<body><div class="card wide"><h1>Admin Dashboard</h1>
+<input id="pass" type="password" placeholder="Admin password">
+<h3>Import Excel</h3><input id="excel" type="file" accept=".xlsx,.xls"><button onclick="importExcel()">Import Column A = Signature ID, B = Name</button>
+<button onclick="loadStats()">Refresh Dashboard</button><button onclick="downloadZip()">Download All Signatures ZIP</button>
+<div id="stats"></div><div class="tablewrap"><table><thead><tr><th>ID</th><th>Name</th><th>Status</th><th>Submitted</th><th>Action</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p id="msg"></p></div><script src="/admin.js"></script></body></html>

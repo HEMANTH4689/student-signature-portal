@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Student Signature Collection</title>
+<link rel="stylesheet" href="/style.css">
+</head><body>
+<div class="card">
+  <h1>Student Digital Signature</h1>
+  <p>Enter your Signature ID</p>
+  <div id="lookup">
+    <input id="sid" placeholder="Signature ID">
+    <button onclick="findStudent()">Continue</button>
+  </div>
+  <div id="form" class="hidden">
+    <div class="student"><b>Signature ID:</b> <span id="showId"></span><br><b>Name:</b> <span id="showName"></span></div>
+    <p>Please sign below using your finger.</p>
+    <div class="canvas-wrap"><canvas id="canvas"></canvas></div>
+    <div class="actions"><button class="secondary" onclick="clearPad()">Clear</button><button onclick="submitSignature()">Submit Signature</button></div>
+  </div>
+  <p id="msg"></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@5.0.0/dist/signature_pad.umd.min.js"></script>
+<script src="/app.js"></script>
+</body></html>
